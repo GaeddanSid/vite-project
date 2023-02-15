@@ -33,7 +33,7 @@
     methods: {
       async generateActivity() {
         const response = await axios.get(
-          'http://www.boredapi.com/api/activity/'
+          'https://www.boredapi.com/api/activity/'
         )
         this.activity = response.data.activity
         this.type = response.data.type
@@ -45,7 +45,7 @@
       },
       async generateByType() {
         const response = await axios.get(
-          `http://www.boredapi.com/api/activity?type=${this.selectedCategory}`
+          `https://www.boredapi.com/api/activity?type=${this.selectedCategory}`
         )
         this.activity = response.data.activity
         this.type = response.data.type
